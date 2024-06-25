@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a =parseInt(prompt("Enter the number :"));
+
+        if(isNaN(a)){
+            document.write("Not a number..");
+        }
+       else  if(a>999 || a<0){
+            document.write("Out of range");
+        }
+        else{
+            document.write("that is number ..");
+
+
+            let ones = ["one","two","three","four","five","six","seven","eight","nine",];
+            let eleven  = ["eleven","twel","therteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+            let twenty = ["ten","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"];
+            let hundrades = ["hundred","twohundred","threehundred","fourhundred","fivehundred","sixhundred","sevenhundred","eighthundred","ninehundred"];
+
+            let result = "";
+
+            if(a==0){
+                document.write("ZERO");
+            }
+            else if(a<10){
+                result = ones[a-1];
+            }
+            else if(a>10 && a<20){
+                result = ones[a-11];
+            }
+
+
+
+            document.write(result); 
+        }
+
+       
+    </script>
+    
+</body>
+</html>
