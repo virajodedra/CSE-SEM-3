@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="bg-primary-subtle text-primary-emphasis">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 calculator m-5">
+                <div class="row" style="margin-bottom: 12px;">
+                    <input type="text" id="ans" class="form-control col-9" readonly>
+                </div>
+                <div class="row">
+                    <button class="btn btn-danger col-2 m-1" value="C" onclick="display('C')" id="clear">C</button>
+                    <button class="btn btn-warning col-2 m-1"  value="←" onclick="display('←')"id="backspace">←</button>
+                    <button class="btn btn-success col-2 m-1"  value="÷" onclick="display('÷')"id="divide">÷</button>
+                    <button class="btn btn-success col-2 m-1" value="*" onclick="display('*')"id="multiply">*</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-secondary col-2 m-1" value="7" onclick="display('7')"id="7">7</button>
+                    <button class="btn btn-secondary col-2 m-1" value="8" onclick="display('8')"id="8">8</button>
+                    <button class="btn btn-secondary col-2 m-1" value="9"  onclick="display('9')"id="9">9</button>
+                    <button class="btn btn-success col-2 m-1"  value="-" onclick="display('-')"id="subtract">-</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-secondary col-2 m-1" value="4" onclick="display('4')"id="4">4</button>
+                    <button class="btn btn-secondary col-2 m-1" value="5" onclick="display('5')" id="5">5</button>
+                    <button class="btn btn-secondary col-2 m-1" value="6" onclick="display('6')"id="6">6</button>
+                    <button class="btn btn-success col-2 m-1"  value="+" onclick="display('+')"id="add">+</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-secondary col-2 m-1" value="1"  onclick="display('1')"id="1">1</button>
+                    <button class="btn btn-secondary col-2 m-1" value="2" onclick="display('2')" id="2">2</button>
+                    <button class="btn btn-secondary col-2 m-1"  value="3" onclick="display('3')"id="3">3</button>
+                    <button class="btn btn-outline-dark col-2 m-1" value="=" onclick="display('=')" id="equals">=</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-secondary col-2 m-1" value="0" onclick="display('0')" id="0">0</button>
+                    <button class="btn btn-secondary col-2 m-1" value="." onclick="display('.')" id="decimal">.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function display(value){
+            a = document.getElementById("ans");
+            ans = inner.HTML(value)
+        }
+    </script>
+</body>
+</html>
