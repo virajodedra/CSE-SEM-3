@@ -6,7 +6,7 @@ import java.util.*;
 // bank accounts. Implement methods to deposit money, withdraw money and
 // check balance.
 
-// made by me  Odedra Viraj.
+ //made by me ODEDRA VIRAJ >.
 
  class BankAccount{
     int ActNumber;
@@ -22,7 +22,7 @@ import java.util.*;
        System.out.println("Enter the act no :"); 
        ActNumber = sc.nextInt();
        System.out.println("Enter the name of account holder :");
-       String actHolder = sc.nextLine();
+       String actHolder = sc.next();
        System.out.println("Enter the name :");
        String name = sc.next();
        
@@ -54,9 +54,22 @@ import java.util.*;
             System.out.println("Enter the amount to be withdrawlled :");
             double w_ammount  = sc.nextDouble(); 
             balance = balance - w_ammount;
-     
+
+            if (w_ammount>balance) {
+
+                System.out.println("Insufficient Balance");
+                
+                while(balance < w_ammount) {
+                    System.out.println("Enter the ammount once more : ");
+                    w_ammount  = sc.nextDouble();
+                    balance = balance - w_ammount;
+                }
+                
+            }
             
              return balance;
+            
+             
          }
      
              public void  printWithdraw(double balance){
@@ -67,7 +80,7 @@ import java.util.*;
 
  }
 
-public class Lab_6_37OG {
+public class Lab_6_37 {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
