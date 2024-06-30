@@ -9,7 +9,7 @@ class SwapFunc
         swp.a=swp.b;
         swp.b=temp;
     }
-    public class lab_5_33{
+    public class lab_6_33{
     public static void main(String s[])
     {
             SwapFunc objSwp= new SwapFunc();
