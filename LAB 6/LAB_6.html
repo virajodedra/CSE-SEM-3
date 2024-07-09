@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body onkeyup="stop()" onkeypress="interval()">
+
+    <button onclick="change()">CLICK HERE </button>
+    <button onclick="interval()">CLICK HERE to change multiple color </button>
+    <button onclick="stop()">click here to stop</button>
+    <BUTTON onfocus="focused()">changes the background color when you try to focus here </BUTTON>
+    <!-- <button onkeyup="">clicked when you press up arrow key</button> -->
+    <button onclick="showDateTime()">CLick here to get the current date & time </button>
+     <h1 onmouseover="abc()" onmouseout="bcd()" >HELLO THIS CAN CHANGE IT'S COLOR !!!!!!</h1>
+
+    <script>
+        abc = ()=>{
+            document.querySelector("h1").style.color = "red";
+            document.querySelector("h1").style.backgroundColor = "blue";
+
+        }
+        bcd = ()=>{
+            document.querySelector("h1").style.color = "white";
+            document.querySelector("h1").style.backgroundColor = "red";
+
+        }
+
+        change = () => {
+            document.body.style.backgroundColor = "lightblue";
+        }
+        changeColor = () => {
+
+            red = Math.ceil(Math.random() * 255);
+            blue = Math.ceil(Math.random() * 255);
+            green = Math.ceil(Math.random() * 255);
+
+            document.body.style.backgroundColor = "rgb(" + red + "," + blue + "," + green + ")";
+
+        }
+
+        function interval() {
+            A = setInterval(changeColor, 400);
+        }
+        function stop() {
+            clearInterval(A);
+        }
+        function focused() {
+            A = setInterval(changeColor, 400);
+        }
+        function showDateTime() {
+            let dateTime = new Date().toLocaleString();
+            // alert("Current date and time is :" + dateTime);
+            let timerInterval;
+            Swal.fire({
+                title: dateTime,
+                html: "I will close in <b></b> milliseconds.",
+                timer: 2000,
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading(); 
+                      document.body.style.backgroundColor = change();
+                    const timer = Swal.getPopup().querySelector("b");
+                    timerInterval = setInterval(() => {
+                        timer.textContent = `${Swal.getTimerLeft()}`;
+                    }, 100);
+                },
+                willClose: () => {
+                    
+                    clearInterval(timerInterval);
+
+                }
+            }).then((result) => {
+                /* Read more about handling dismissals below */
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log("I was closed by the timer");
+                }
+            });
+        }
+
+
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
