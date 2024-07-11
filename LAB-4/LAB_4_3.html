@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="row">
+      <script>
+        let arr = [
+          {
+            FacultyName: "jasmin",
+            FacultyId: 1,
+            City: " porbandar",
+            Gender: "male ",
+            img: "https://t3.ftcdn.net/jpg/02/26/07/38/360_F_226073875_pAXMTrDH9XokT4qKe0Yv4wsDpJgHifkN.jpg",
+          },
+          {
+            FacultyName: "pruthviraj",
+            FacultyId: 2,
+            City: "morbi",
+            Gender: "male ",
+            img: "https://t3.ftcdn.net/jpg/02/26/07/38/360_F_226073875_pAXMTrDH9XokT4qKe0Yv4wsDpJgHifkN.jpg",
+          },
+          {
+            FacultyName: "viraj",
+            FacultyId: 3,
+            City: "porbandar",
+            Gender: "male ",
+            img: "https://t3.ftcdn.net/jpg/02/26/07/38/360_F_226073875_pAXMTrDH9XokT4qKe0Yv4wsDpJgHifkN.jpg",
+          },
+          {
+            FacultyName: "harshil",
+            FacultyId: 4,
+            City: "porbandar",
+            Gender: "male ",
+            img: "https://t3.ftcdn.net/jpg/02/26/07/38/360_F_226073875_pAXMTrDH9XokT4qKe0Yv4wsDpJgHifkN.jpg",
+          },
+          {
+            FacultyName: "manav",
+            FacultyId: 5,
+            City: "porbandar",
+            Gender: "male ",
+            img: "https://t3.ftcdn.net/jpg/02/26/07/38/360_F_226073875_pAXMTrDH9XokT4qKe0Yv4wsDpJgHifkN.jpg",
+          },
+        ];
+
+        for (s of arr) {
+          document.write('<div class="card" style="width: 18rem;">');
+          document.write(
+            '<img src="' + s.img + '" class="card-img-top" alt="..."/>'
+          );
+          document.write('<div class="card-body">');
+          document.write('<h5 class="card-title">' + s.FacultyName + "</h5>");
+          document.write('<p class="card-text">' + s.FacultyId + "</p>");
+          document.write('<p class="card-text">' + s.City + "</p>");
+          document.write('<p class="card-text">' + s.Gender + "</p>");
+
+          document.write(" </div>");
+          document.write("</div>");
+
+          // document.write(s.FacultyName,"&nbsp;,&nbsp")
+          // document.write(s.FacultyId,"&nbsp;,&nbsp")
+          // document.write(s.City,"&nbsp;,&nbsp")
+
+          // document.write(s.Gender,"&nbsp;,&nbsp")
+        }
+      </script>
+    </div>
+  </body>
+</html>

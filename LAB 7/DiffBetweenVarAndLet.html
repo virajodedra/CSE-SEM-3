@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIFFRENCE BETWEEN VAR AND LET .</title>
+</head>
+<body>
+    <script>
+         a =10;
+         document.write("A outside :",a);
+        document.write("</br>");
+         function abc(){
+            var a = 15;
+            document.write("A inside the function :",a);
+            document.write("</br>");
+
+
+            if(true){
+                let a = 20;
+                document.write("A inside the block :",a);
+                document.write("</br>");
+
+
+            }
+
+         }
+         abc();
+    </script>
+    
+</body>
+</html>

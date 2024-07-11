@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+function bubbleSort(arr, n)
+{
+    var i, j, temp;
+    var swapped;
+    for (i = 0; i < n - 1; i++) 
+    {
+        swapped = false;
+        for (j = 0; j < n - i - 1; j++) 
+        {
+            if (arr[j] > arr[j + 1]) 
+            {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swapped = true;
+            }
+        }
+
+        
+        if (swapped == false)
+        break;
+    }
+}
+
+function printArray(arr, size)
+{
+  var i;
+  for (i = 0; i < size; i++)
+      document.write(arr[i] + " ");
+}
+
+
+var arr = [1,2,2,1,21,21,212,342534634,645,67456,,43563,43,6364, 34, 25, 12, 22, 11, 90,12,12,12,12,1,21343,3,343434,6676767,98989,5656,8786858,43535,14552515,434353,3453453,34,5,35,35,,,76758,568,678,8,78,6758,68,58,58,56,85,85,5,867867,86,867,65,8,8,58,567,5678,5678,56,78,5678,56,7856,8568,567,85,8,5678,5,78,57,567,8,568,58,567,85,78,,8,8,865,8778,,7858,76785876,5,87,8,5678,5678,56,785678,5678,567,85,678,56785,678568,56785,678,567856875,8,58 ];
+var n = arr.length;
+bubbleSort(arr, n);
+document.write("Sorted array: ");
+printArray(arr, n);
+
+
+    // credit goes to obito.
+    </script>
+    
+</body>
+</html>

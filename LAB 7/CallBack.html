@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back function implemntation .....</title>
+</head>
+<body>
+    <input type="text" id="try">
+
+    <script>
+
+        function Display(c){
+            document.getElementById('try').value = c;
+        }
+
+        function Sum(n,m,myCallback){
+            let c = n + m;
+            myCallback(c);
+        }
+
+        Sum(5,5,Display);
+
+    </script>
+    
+    
+</body>
+</html>
