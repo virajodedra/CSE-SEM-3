@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the for of  loop  and spread operator.</title>
+</head>
+<body>
+    <script>
+        student1 = [
+            {
+                name : "pruthviraj",
+                age : 19,
+                SPI : 10.1
+            },
+            {
+                name : "viraj",
+                age : 18,
+                SPI : 10.1
+            },
+            {
+                name : "harshil",
+                age : 19,
+                SPI : 10.1
+            },
+            {
+                name : "jasmin",
+                age : 19,
+                SPI : 10.2
+            }
+        ]
+
+        student2 = [...student1];
+
+        for(data of student2){
+            console.log(data.name);
+            console.log(data.age);
+            console.log(data.SPI);
+
+        }
+        console.log();
+        console.log();
+        console.log();
+
+        console.log();
+        console.log();
+
+
+</script>
+    
+</body>
+</html>
