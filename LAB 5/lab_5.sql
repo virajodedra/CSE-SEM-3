@@ -95,6 +95,9 @@ select * from Students
 --2. Display all the students whose address contains single quote or double quote.
 	select * from Students
 	where Address  like '%''%' or Address  like '%"%'
+--2. Display all the students whose address contains single quote and not contain double quote.
+	select * from Student
+	where Address  like '%''%''%' 
 --3. Display all the students whose website contains @.
 	select * from Students
 	where Website  like '%@%'
