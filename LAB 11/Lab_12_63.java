@@ -36,7 +36,7 @@ class Stack{
     public void insertAtAnyPosition(int data, int pos) {
         Node newNode = new Node(data);
         if(first == null) {
-            if(pos == 1) {
+            if(position == 1) {
                 insertAtFirst(data);
                 return;
             }
@@ -45,13 +45,13 @@ class Stack{
                 return;
             }
         }
-        else if(pos == 1) {
+        else if(position == 1) {
             insertAtFirst(data);
             return;
         }
         Node current = first;
         Node previous = null;
-        for(int i=1; i<pos ;i++) {
+        for(int i = 1; i < position ;i++) {
             if(current.next != null) {
                 previous = current;
                 current = current.next;
