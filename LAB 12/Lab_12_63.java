@@ -10,7 +10,7 @@ class Node{
     }
 }
 
-class Stack{
+class LinkedList{
     Node first = null;
     
     public void insertAtFirst(int data) {
@@ -165,7 +165,7 @@ public class Lab_12_63 {
         int choice
         int data;
         int position; 
-        Stack stack = new Stack();
+        LinkedList list = new LinkedList();
         do {
             System.out.println("Enter 1 to insert a node at the first of the linked list !");
             System.out.println("Enter 2 to insert a node at the end of the linked list !!");
@@ -181,13 +181,13 @@ public class Lab_12_63 {
                 case 1: 
                     System.out.println("Enter the data : ");
                     data = sc.nextInt();
-                    Stack.insertAtFirst(data);
+                    list.insertAtFirst(data);
                     break;
                 
                 case 2:
                     System.out.println("Enter the data : ");
                     data = sc.nextInt();
-                    Stack.insertAtLast(data);
+                    list.insertAtLast(data);
                     break;
 
                 case 3:
@@ -195,29 +195,29 @@ public class Lab_12_63 {
                     data = sc.nextInt();
                     System.out.println("Enter a position at which you want to enter the data: ");
                     position = sc.nextInt();
-                    Stack.insertAtAnyPosition(data, position);
+                    list.insertAtAnyPosition(data, position);
                     break;
 
                 case 4:
-                    Stack.deleteFromFirst();
+                    list.deleteFromFirst();
                     break;
 
                 case 5:
-                    Stack.deleteFromLast();
+                    list.deleteFromLast();
                     break;
 
                 case 6:
                     System.out.println("Enter the position to delete the data: ");
                     position = sc.nextInt();
-                    Stack.deleteFromAnyPosition(pos);
+                    list.deleteFromAnyPosition(pos);
                     break;
 
                 case 7:
-                    Stack.display();
+                    list.display();
                     break;
 
                 case 8:
-                    Stack.count();
+                    list.count();
                     break;
 
                 default:
