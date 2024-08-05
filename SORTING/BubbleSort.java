@@ -12,7 +12,7 @@ class BubbleSort {
             for (j = 0; j < n - i -1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     
-                    // Swap arr[j] and arr[j+1]
+                    // Here we Swap arr[j] and arr[j+1]
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -20,8 +20,7 @@ class BubbleSort {
                 }
             }
 
-            // If no two elements were
-            // swapped by inner loop, then break
+            // Note :- If no two elements were swapped by inner loop, then break
             if (swapped == false)
                 break;
         }
@@ -35,8 +34,7 @@ class BubbleSort {
             System.out.print(arr[i] + " ");
         System.out.println();
     }
-
-    // Driver program
+    
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         
