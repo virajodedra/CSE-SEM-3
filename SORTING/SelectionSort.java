@@ -12,11 +12,12 @@ public class SelectionSort{
             arr[i] = sc.nextInt();
 
         }
-        SelectionSort os = new SelectionSort();
-        os.Sort( arr , n);
+        // SelectionSort os = new SelectionSort();
+        // os.Sort( arr , n);
+        sort(arr, n);
     }
 
-    public void Sort(int arr[], int n){
+    public static void Sort(int arr[], int n){
 
         for(int i=0; i<arr.length-1; i++){
 
