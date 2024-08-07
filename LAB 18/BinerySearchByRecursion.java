@@ -13,7 +13,7 @@ public class BinerySearchByRecursion {
         System.out.println("Enter the element to search: ");
         int key = sc.nextInt();
         
-        int result = binerySearchByRecursion(arr, 0, n - 1, key);
+        int result = binarySearchByRecursion(arr, 0, n - 1, key);
         
         if(result == -1){
             System.out.println("Element not found");
@@ -24,7 +24,7 @@ public class BinerySearchByRecursion {
             return;
         }
     }
-    public static int binerySearchByRecursion(int arr[], int left, int right, int key) {
+    public static int binarySearchByRecursion(int arr[], int left, int right, int key) {
         while(left <= right){
             
             int mid = left + (right - left) / 2;
@@ -33,10 +33,10 @@ public class BinerySearchByRecursion {
                 return mid;
             }   
             if(arr[mid] < key){
-                return binerySearchByRecursion(arr,left,mid - 1,key);
+                return binarySearchByRecursion(arr,left,mid - 1,key);
             } 
             else {
-                return binerySearchByRecursion(arr,mid + 1,right,key);
+                return binarySearchByRecursion(arr,mid + 1,right,key);
             }
         }
         return -1;
