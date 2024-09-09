@@ -114,5 +114,5 @@ select avg(Result.SPI), Stu_Info.Branch
 
 --1. Retrieve the names of employee along with their manager’s name from the Employee table.
 	select e.Name as Employee_Name, m.Name as Manager_name
-	from EMPLOYEE_MASTER e  inner join EMPLOYEE_MASTER m
+	from EMPLOYEE_MASTER e  left join EMPLOYEE_MASTER m
 	on e.ManagerNo = m.EmployeeNo
