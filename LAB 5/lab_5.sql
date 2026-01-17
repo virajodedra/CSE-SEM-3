@@ -89,6 +89,18 @@ select * from Students
 	where website like '%.net%'
 
 --Part – C:
+-- if needed use this table to  understand more  about the  c part  queries :-
+/*
+| Requirement                  | Correct Pattern                  |
+| ---------------------------- | -------------------------------- |
+| Contains `'`                 | `LIKE '%''%'`                    |
+| Contains `"`                 | `LIKE '%"%'`                     |
+| Contains `'` **OR** `"`      | `LIKE '%''%' OR LIKE '%"%'`      |
+| Contains `'` **AND NOT** `"` | `LIKE '%''%' AND NOT LIKE '%"%'` |
+
+*/
+
+	 
 --1. Display all the students whose address consist of -.
 	select * from Students
 	where Address  like '%-%'	
