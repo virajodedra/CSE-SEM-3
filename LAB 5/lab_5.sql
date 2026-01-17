@@ -96,12 +96,20 @@ select * from Students
 	select * from Students
 	where Address  like '%''%' or Address  like '%"%'
 --2. Display all the students whose address contains single quote and not contain double quote.
-	select * from Student
-	where Address  like '%''%''%' 
+	-- this commented query not work as  expected the new solution is written below this  commented query check that out if needed :-
+	 -- select * from Student
+	-- where Address  like '%''%''%' 
+
+	 -- Perfect Solution.
+	 SELECT *
+		FROM Students
+		WHERE Address LIKE '%''%'
+		AND Address NOT LIKE '%"%';
+
 --3. Display all the students whose website contains @.
 	select * from Students
 	where Website  like '%@%'
 	select * from Students
 --4. Display all the names those are either four or five characters.
 	select * from Students
-	where FirstName  like '%____%' or FirstName  like '%_____%'
+	where FirstName  like '____' or FirstName  like '_____'
