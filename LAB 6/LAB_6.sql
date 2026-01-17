@@ -23,6 +23,7 @@
 	select 5%3 as result
 
 --6. Find out value of 3 raised to 2nd power and 4 raised 3rd power.
+	-- power(base, exponent)
 	select power(3,2) as result
 	select power(4,3) as result
 --7. Find out the square root of 25, 30 and 50.
