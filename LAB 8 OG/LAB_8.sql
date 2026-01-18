@@ -78,10 +78,11 @@
 
 --10. Display Regions with at Least 3 Distinct Products Sold.
 	select 
-		distinct Region, count(product)
+	    Region,
+	    count(distinct Product) as product_count
 	from sale_data
 	group by Region
-	having count(product) > 2
+	having count(distinct Product) >= 3;
 
 --11. Display Years with Minimum Sales Less Than 1000
 	select
