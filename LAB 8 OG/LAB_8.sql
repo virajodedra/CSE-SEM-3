@@ -124,6 +124,18 @@
 	from sale_data
 	where Year = 2024
 	group by Region,Year
+	order by sum(Sales_Amount) desc;
+-- or the below query should work more  better  and performe more  better  
+
+-- here  no need to  " group by " by the Year becuase  we  already filtered the records with the year = 2024 
+	select top 3
+	    Region,
+	    sum(Sales_Amount) as Total_Sales
+	from sale_data
+	where Year = 2024
+	group by Region
+	order by sum(Sales_Amount) desc;
+
 	
 
 -------------------------------------------------------------------------------------------------Part – C--------------------------------------:--------------------------------------------
