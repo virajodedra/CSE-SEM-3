@@ -10,10 +10,10 @@ public class CountingSearch {
             System.out.println("Enter the element : ("+i+")");
             arr[i] = sc.nextInt();
         }
-        countingSearch(arr, n);
+        countingSort(arr, n);
     }
 
-    public static void countingSearch(int[] arr, int n){
+    public static void countingSort(int[] arr, int n){
         int max = arr[0];
 
         for(int i = 0; i < n; i++){
