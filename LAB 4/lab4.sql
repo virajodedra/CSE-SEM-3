@@ -134,7 +134,7 @@ select * from EMPLOYEE_MASTER
 	select * from EMPLOYEE_MASTER
 --3. Delete all the Employees who joined after 1-1-2007.
 	delete from EMPLOYEE_MASTER
-	where JoiningDate = '2007-1-1';
+	where JoiningDate >= '2007-1-1';
 
 	select * from EMPLOYEE_MASTER
 --4. Delete the records of Employees whose joining date is null and Name is not null.
@@ -149,7 +149,7 @@ select * from EMPLOYEE_MASTER
 	select * from EMPLOYEE_MASTER
 --6. Delete the records of Employees whose City Name is not empty.
 	delete from EMPLOYEE_MASTER
-	where City  != null;
+	WHERE City IS NOT NULL;
 
 	select * from EMPLOYEE_MASTER
 --7. Delete all the records of Employee_MASTER table. (Use Truncate)
