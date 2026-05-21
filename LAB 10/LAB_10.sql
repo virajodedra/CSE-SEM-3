@@ -59,7 +59,7 @@ select * from Student_INFO
 	values(107, 'Meet', 'ME');
 
 	select * from AcademicData
---7. Update the branch of Amit from CE to ME in Student_Details view.
+--7. Update the branch of    Amit from CE to ME in Student_Details view.
 	update Student_Details
 	set Branch = 'ME'
 	where Name = 'Amit' and Branch = 'CE'
